@@ -1,9 +1,9 @@
-from django.urls import include, re_path
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    re_path(r'^login/', views.user_login, name='login'),
-    re_path(r'^logout/', views.user_logout, name='logout'),
-    re_path(r'^register/', views.user_register, name='register'),
-    re_path(r'^facebook/', views.facebook, name='facebook'),
+    url(r'^login/', views.user_login, name='login'),
+    url(r'^logout/', views.user_logout, name='logout'),
+    url(r'^register/', views.user_register, name='register'),
+    url(r'^facebook/', views.facebook, name='facebook'),
 ]
