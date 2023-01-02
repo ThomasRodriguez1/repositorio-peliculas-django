@@ -20,32 +20,32 @@
 
     <button class="button search_button" id="search_button1" onclick="show1()"
             style="background-color: #008CBA;color: white;">
-        <span class="glyphicon glyphicon-film"></span> Movie
+        <span class="glyphicon glyphicon-film"></span> Película
     </button>
     <button class="button search_button" id="search_button2" onclick="show2()">
         <span class="glyphicon glyphicon-user"></span> Actor
     </button>
     <div id="search1">
         {% if  search1 %}
-            <h2>{{ number1 }} movie(s) with "{{ search1 }}":</h2>
+            <h2>{{ number1 }} películas con "{{ search1 }}":</h2>
             <hr>
         {% endif %}
 
         {% for movie in movies %}
             <h2><a href="/movie/movie_detail/{{ movie.movieid }}" target="_self">{{ movie.title }}</a></h2>
-            <img border="0" src="{{ movie.poster }}" alt="Cannot load photo, sorry!" width="200" height="320">
+            <img border="0" src="{{ movie.poster }}" alt="No se pudo cargar la foto!" width="200" height="320">
             <hr>
         {% endfor %}
     </div>
     <div id="search2" style="display:none;">
         {% if  search2 %}
-            <h2>{{ number2 }} actor(s) with "{{ search2 }}":</h2>
+            <h2>{{ number2 }} actores con "{{ search2 }}":</h2>
             <hr>
         {% endif %}
 
         {% for actor in actors %}
             <h3><a href="/movie/actor_detail/{{ actor.actorid }}" target="_self">{{ actor.name }}</a></h3>
-            <img border="0" src="{{ actor.photo }}" alt="Cannot load photo, sorry!" width="200" height="280">
+            <img border="0" src="{{ actor.photo }}" alt="No se pudo cargar la foto, sorry!" width="200" height="280">
             <hr>
         {% endfor %}
     </div>

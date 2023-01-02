@@ -1,6 +1,7 @@
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+myenv/
 
 # Folder config file
 Desktop.ini
@@ -48,3 +49,4 @@ Temporary Items
 
 __pycache__
 .idea/*
+

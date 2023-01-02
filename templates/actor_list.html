@@ -8,8 +8,8 @@
             <div id="detail-infro">
                 <h1>{{ object.title }}</h1>
                 {% if  user.is_authenticated %}
-                    <button class="add_button" id="seen">Have seen</button>
-                    <button class="add_button" id="expect">Want to see</button>
+                    <button class="add_button" id="seen">Ya la he visto</button>
+                    <button class="add_button" id="expect">Quiero verla</button>
                     <b style="color: #f44336" id="message"></b>
                     {% if  object.flag == 1 %}
                         <script>
@@ -70,12 +70,12 @@
                 <!-- Layer -->
                 {#                <div class="Layer" id="layer"></div>#}
 
-                <p><b>Year:</b> {{ object.year }}</p>
-                <p><b>Genres:</b> {{ object.genres }}</p>
-                <p><b>Movie Length:</b> {{ object.length }} min</p>
+                <p><b>Año:</b> {{ object.year }}</p>
+                <p><b>Géneros:</b> {{ object.genres }}</p>
+                <p><b>Duración de la pelicula:</b> {{ object.length }} min</p>
                 <span class="stars">{{ object.rate }}</span>
-                <p><b>Rating:</b> {{ object.rate }}</p>
-                <p><a href="http://www.imdb.com/title/{{ object.movieid }}" target="_blank">See in IMDB <span
+                <p><b>Calificación:</b> {{ object.rate }}</p>
+                <p><a href="http://www.imdb.com/title/{{ object.movieid }}" target="_blank">Ver en IMDB <span
                         class="glyphicon glyphicon-new-window"></span></a></p>
                 <span class="click_Show"> <button class="button_trailer">
                 <span class="glyphicon glyphicon-play-circle"></span> Trailer</button>
@@ -94,14 +94,14 @@
                     </div>
                 </div>
 
-                <p id="summary"><b>Plot Summary: </b>"{{ object.plot }}"</p>
+                <p id="summary"><b>Sinopsis: </b>"{{ object.plot }}"</p>
 
             </div>
 
             <div id="main-pic">
                 <img border="0" src="{{ object.poster }}" alt="Cannot load photo, sorry!" width="300" height="500">
             </div>
-            <h2>Main actors in {{ object.title }}:</h2>
+            <h2>Actores principales en {{ object.title }}:</h2>
             <hr>
         {% endif %}
 
@@ -121,10 +121,10 @@
         {% endfor %}
 
         {% if pages %}
-            <p>You are in the {{ current_page }} page, {{ page_number }} pages in total</p>
+            <p>Página número {{ current_page }}, de {{ page_number }} páginas en total</p>
             {% if current_page != 1 %}
-                <a href="/movie/actor_all/{{ 1 }}" target="_self">First</a>
-                <a href="/movie/actor_all/{{ current_page|add:-1 }}" target="_self">Previous</a>
+                <a href="/movie/actor_all/{{ 1 }}" target="_self">Primera</a>
+                <a href="/movie/actor_all/{{ current_page|add:-1 }}" target="_self">Anterior</a>
             {% endif %}
 
             {% for page in pages %}
@@ -136,8 +136,8 @@
             {% endfor %}
 
             {% if current_page != page_number %}
-                <a href="/movie/actor_all/{{ current_page|add:1 }}" target="_self">Next</a>
-                <a href="/movie/actor_all/{{ page_number }}" target="_self">Last</a>
+                <a href="/movie/actor_all/{{ current_page|add:1 }}" target="_self">Siguiente</a>
+                <a href="/movie/actor_all/{{ page_number }}" target="_self">Última</a>
             {% endif %}
         {% endif %}
 

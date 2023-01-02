@@ -42,7 +42,10 @@ def get_recommendation(request, popular_movie_list):
         for movie in unwatched_movies:
             movie_score[movie.movieid] = movie.rate
             for genre in movie.genres.split('|'):
-                movie_score[movie.movieid] += genre_stats.get(genre, 0) / len(watched_movies)
+                if len(watched_movies) == 0:
+                    movie_score[movie.movieid] += genre_stats.get(genre, 0) /1
+                else:
+                    movie_score[movie.movieid] += genre_stats.get(genre, 0) / len(watched_movies)
         sorted_list = sorted(movie_score.items(), key=operator.itemgetter(1), reverse=True)
         for item in sorted_list:
             movie = movie_dict[item[0]]
