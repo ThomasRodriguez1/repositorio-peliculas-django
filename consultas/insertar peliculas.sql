@@ -137,7 +137,7 @@ VALUES  ("tt0499549",
         "Acción|Aventura|Fantasia|Sci-Fi",
         "7.1",
         "https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_.jpg",
-        "An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened, when survivors of his home planet invade Earth.",
+        "Un niño alienígena es evacuado de su mundo moribundo y enviado a la Tierra para vivir entre los humanos. Su paz se ve amenazada cuando otros supervivientes de su planeta natal invaden la Tierra.",
         "https://www.youtube.com/embed/T6DJcgm3wNY"
       ),
         ("tt0499448",
@@ -228,7 +228,7 @@ VALUES  ("tt0499549",
         "6.1",
         "https://m.media-amazon.com/images/M/MV5BMTM2NDkxMjQxMV5BMl5BanBnXkFtZTYwNTMxMDM4._V1_.jpg",
         "En un universo paralelo, la joven Lyra Belacqua viaja al lejano norte para salvar a su mejor amigo y a otros niños secuestrados de los terribles experimentos de una misteriosa organización.",
-        "https://www.youtube.com/embed/LHYoOGfBObU
-      )
+        "https://www.youtube.com/embed/LHYoOGfBObU"
+      );
 /*INSERT or replace INTO movie_movie (movieid, title, year, length, genres, rate, poster, plot, trailer)
 VALUES ()*/
